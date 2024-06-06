@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Header */
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Search Box */
+.search-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#city-input {
+    padding: 12px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #ccc;
+    width: 70%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #007bff;
+}
+
+#get-weather {
+    padding: 12px 20px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#get-weather:hover {
+    background-color: #0056b3;
+}
+
+/* Weather Info */
+.weather-info {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.weather-info h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.weather-info img {
+    margin: 15px 0;
+    width: 100px;  /* Adjusted width for better visual balance */
+    height: 100px; /* Adjusted height for better visual balance */
+}
+
+.weather-info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Graphical Representation */
+.weather-graphic {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+
+    #get-weather {
+        padding: 12px 15px;
+    }
+
+    .weather-info img {
+        width: 80px;  /* Adjusted width for smaller screens */
+        height: 80px; /* Adjusted height for smaller screens */
+    }
+
+    .weather-graphic {
+        width: 80px;  /* Adjusted width for smaller screens */
+        height: 80px; /* Adjusted height for smaller screens */
+    }
+}
